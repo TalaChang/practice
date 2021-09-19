@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+  string N;
+  cin>> N;
+  int L = N.size();
+  bool a = true;
+  for(int i=0; i + 2 < L; i++){
+    if(N.at(i) == N.at(i+1) && N.at(i+1) == N.at(i+2)){
+      cout<< "指定したパスワードには同じ文字が連続して3つ並んである箇所があります。"<<endl;
+      a = false;
+      break;
+    }
+  }
+  if( a ){
+    cout<< "指定したパスワードは安全です。"<<endl;
+  }
+}
